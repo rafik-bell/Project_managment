@@ -1,0 +1,346 @@
+
+    .kanban-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      overflow: hidden;
+    }
+
+    .table-header {
+      display: flex;
+      background: white;
+      border-bottom: 3px solid #e0e0e0;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header-cell {
+      width: 280px;
+      min-width: 280px;
+      padding: 12px 16px;
+      border-right: 1px solid #e0e0e0;
+      background: white;
+    }
+
+    .header-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #666;
+      letter-spacing: 0.5px;
+    }
+
+    .column-header-cell {
+      flex: 1;
+      min-width: 250px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-right: 1px solid #e0e0e0;
+      background: #fafafa;
+    }
+
+    .column-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #666;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-arrow {
+      background: none;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 0 4px;
+    }
+
+    .nav-arrow:hover {
+      color: #666;
+    }
+
+    .table-body {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .table-row {
+      display: flex;
+      border-bottom: 1px solid #e0e0e0;
+      min-height: 100px;
+    }
+
+    .story-cell {
+      width: 280px;
+      min-width: 280px;
+      padding: 12px 16px;
+      border-right: 1px solid #e0e0e0;
+      background: white;
+    }
+
+    .story-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .expand-btn {
+      background: none;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      padding: 0;
+      width: 16px;
+      font-size: 14px;
+    }
+
+    .expand-btn:hover {
+      color: #666;
+    }
+
+    .story-id {
+      font-size: 13px;
+      color: #06b6d4;
+      font-weight: 500;
+    }
+
+    .story-name {
+      font-size: 13px;
+      color: #333;
+      flex: 1;
+    }
+
+    .story-name.storyless {
+      color: #666;
+    }
+
+    .action-btn {
+      background: none;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      padding: 0 4px;
+      font-size: 16px;
+    }
+
+    .action-btn:hover {
+      color: #666;
+    }
+
+    .story-tag-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 22px;
+      margin-top: 8px;
+    }
+
+    .story-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #7c3aed;
+    }
+
+    .tag-status {
+      font-size: 11px;
+      color: #999;
+    }
+
+    .column-cell {
+      flex: 1;
+      min-width: 250px;
+      padding: 16px;
+      border-right: 1px solid #e0e0e0;
+      background: #fafafa;
+      transition: background-color 0.2s;
+    }
+
+    .column-cell:hover {
+      background: #f0f0f0;
+    }
+
+    .task-card {
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e5e7eb;
+      padding: 12px;
+      margin-bottom: 12px;
+      cursor: grab;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .task-card:hover {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .task-card:active {
+      cursor: grabbing;
+    }
+
+    .task-card.dragging {
+      opacity: 0.5;
+      cursor: grabbing;
+    }
+
+    .task-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .task-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #333;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .task-id {
+      color: #06b6d4;
+    }
+
+    .task-menu {
+      background: none;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      padding: 0;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .task-menu:hover {
+      color: #666;
+    }
+
+    .task-assignment {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .avatar-placeholder {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid #d1d5db;
+    }
+    
+
+    .assignment-text {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+        padding: 16px;
+        transition: box-shadow 0.2s;
+      }
+
+      .card:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+
+      .card-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #1f2937;
+        margin: 0;
+      }
+
+      .card-id {
+        color: #06b6d4;
+      }
+
+      .card-menu {
+        background: none;
+        border: none;
+        color: #9ca3af;
+        cursor: pointer;
+        padding: 0;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+        transition: color 0.2s;
+      }
+
+      .card-menu:hover {
+        color: #4b5563;
+      }
+
+      .card-assignment {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: #e5e7eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .avatar-initial {
+        font-size: 12px;
+        font-weight: 500;
+        color: #4b5563;
+      }
+
+      .avatar-placeholder {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid #d1d5db;
+      }
+
+      .assignment-text {
+        font-size: 12px;
+        color: #6b7280;
+      }
+  

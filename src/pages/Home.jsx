@@ -1,11 +1,10 @@
 // src/pages/Home.jsx
 import React from 'react';
-import Card from '../components/Card';
 import KanbanBoard from '../components/KanbanBoard';
 
 const Home = () => (
-    <div className="min-h-screen bg-gray-50 p-8">
-    <div className="max-w-sm space-y-4">
+    
+  <div className="overflow-x-auto ">
       {/* <Card 
         id={20} 
         title="fmxsdgmgf" 
@@ -26,7 +25,6 @@ const Home = () => (
       /> */}
       <KanbanBoard></KanbanBoard>
     </div>
-  </div>
 );
 
 export default Home;
